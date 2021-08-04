@@ -9,8 +9,6 @@
     --middle-font: 15px;
     --semi-large-font: 17px;
     --large-font: 20px;
-
-    --content-width: 465px;
 }
 
 * {
@@ -36,11 +34,11 @@ body, button, input, a {
 }
 
 body {
-    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px auto 10px auto;
+    background-color: var(--background-color);
 }
 
 header, section, footer {
@@ -49,17 +47,18 @@ header, section, footer {
     flex-direction: column;
     align-items: center;
     width: 768px;
+    padding: 0px 151.5px;
 }
 
-/* footer {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 10px;
-} */
-
 /* Header */
+header {
+    padding-top: 90px;
+    padding-bottom: 50px;
+}
+
 header #language {
     position: absolute;
+    top: 0;
     right: 0;
     width: 96px;
     height: 30px;
@@ -73,19 +72,18 @@ header #language {
 header .logo img {
     width: 236px;
     height: 50px;
-    margin-top: 90px;
-    margin-bottom: 50px;
 }
 
 /* Main-Form */
 .main form {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
 .main .form-login input {
-    width: var(--content-width);
+    /* width: 100%; */
     height: 48px;
     font-size: var(--middle-font);
     padding-left: 10px;
@@ -104,7 +102,7 @@ header .logo img {
 
 /* Main-LoginCheck */
 .main .loginChk {
-    width: var(--content-width);
+    width: 100%;
     display: flex;
     padding: 10px 0;
     border-bottom: solid 1px var(--grey-light-color);
@@ -146,7 +144,7 @@ header .logo img {
 
 /* Main-HandyLogin */
 .main .handyLogin {
-    width: var(--content-width);
+    width: 100%;
 }
 
 .main .handyLogin p {
@@ -198,12 +196,13 @@ header .logo img {
 
 /* Advertisement */
 .ad {
+    width: 100%;
     margin-top: 45px;
     margin-bottom: 90px;
 }
 
 .ad img {
-    width: var(--content-width);
+    width: 458px;
     border: solid 1px var(--grey-light-color);
 }
 
@@ -244,4 +243,25 @@ footer .copyright #corp:hover {
     text-decoration: underline;
     font-weight: bolder;
     color: var(--green-color);
+}
+
+/* Media */
+@media screen and (max-width: 768px) {
+    body {
+        margin: 20px 15px 10px 15px;
+    }
+
+    header, section, footer {
+        width: 100%;
+        padding: 0px;
+    }
+
+    header {
+        padding: 71px 0 35px;
+    }
+
+    header .logo img {
+        width: 165px;
+        height: 32px;
+    }
 }
