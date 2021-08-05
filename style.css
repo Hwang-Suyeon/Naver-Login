@@ -16,6 +16,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 ul {
     list-style: none;
 }
@@ -37,7 +38,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px auto 10px auto;
+    margin: 20px 0 10px 0;
     background-color: var(--background-color);
 }
 
@@ -263,5 +264,14 @@ footer .copyright #corp:hover {
     header .logo img {
         width: 165px;
         height: 32px;
+    }
+
+    .security {
+
+        visibility: hidden;
+    }
+
+    footer {
+        visibility: hidden;
     }
 }
